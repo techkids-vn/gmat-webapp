@@ -1,0 +1,14 @@
+.create-post
+  .container
+    .form-group
+      label Title
+      input.form-control(placeholder="Title" ng-model="title")
+    .form-group
+      label Category
+      select.form-control(ng-options="category.name for category in categories" ng-model="category")
+    .form-group
+      label Thumbnail
+      input.form-control(type="file")
+    textarea#editor(rows="10" cols="80")
+    .form-group
+      .btn.btn-primary(ng-click="submitPost()") Submit
