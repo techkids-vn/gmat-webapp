@@ -9,16 +9,11 @@ var QuestionSchema = mongoose.Schema({
   sub_type: String,
   stimulus: String,
   stem: String,
-  answer_choices: {
-    index : String,
-    choice : String,
-    explanation : String,
-    note : String
-  },
+  answer_choices: [],
   right_answer: String
 },
   {
-    collection : 'question' 
+    collection : 'question'
   }
 );
 

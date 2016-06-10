@@ -8,8 +8,10 @@ var controller = require('./gmat.controller.js');
 
 var router = express.Router();
 
-router.post('/postQuestion', controller.postQuestion);
 router.get('/questions', controller.getQuestions);
-router.post('/delete', controller.deleteQuestion);
+router.get('/question_pack', controller.getQuestionPacks);
+router.post('/post-question', controller.postQuestion);
+router.post('/delete-question', controller.deleteQuestion);
+router.post('/post-question-pack', controller.postQuestionPack);
 
 module.exports = router;

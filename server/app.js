@@ -8,7 +8,6 @@ import express from 'express';
 import config from './config/environment';
 import http from 'http';
 import mongoose from 'mongoose';
-// import Question from './api/gmat/question.model';
 
 // Setup server
 var app = express();
