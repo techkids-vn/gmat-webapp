@@ -7,5 +7,5 @@ module.exports = {
   // Seed database on startup
   seedDB: true,
 
-  mongoURI: "mongodb://webteam:webteam@ds011840.mlab.com:11840/gmat"
+  mongoURI: "mongodb://admin:admin@ds013014.mlab.com:13014/gmat"
 };

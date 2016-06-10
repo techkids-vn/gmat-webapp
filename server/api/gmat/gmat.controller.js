@@ -8,14 +8,14 @@ import Question from './question.model';
 export function getQuestions(req, res) {
   Question.find(function (err, data) {
     res.json({err, data});
-  })
-}
+  });
+};
 
 export function postQuestion(req, res) {
   Question.find(function (err, data) {
     res.json({err, data});
-  })
-}
+  });
+};
 
 export function postQuestion(req, res) {
   var post = {
@@ -41,5 +41,5 @@ export function deleteQuestion(req, err) {
     product.remove(function (err, product) {
       res.json({err,product});
     });
-  }
+  })
 }
