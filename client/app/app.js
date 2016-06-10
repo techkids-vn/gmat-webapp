@@ -16,12 +16,7 @@ angular.module('techkidsApp', [
         templateUrl: 'app/main/main.html',
         controller: 'MainController'
       })
-      .state('create-edit-post', {
-        url: '/create-post',
-        templateUrl: 'app/post/create-post.html',
-        controller: 'PostController',
-        params: {post: {}}
-      })  
+      
     ;
 
     $locationProvider.html5Mode(true);
