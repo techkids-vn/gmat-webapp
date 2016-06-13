@@ -37,17 +37,15 @@ export function deleteQuestion(req, res) {
 
 export function editQuestion(req, res) {
     Question.findById(req.body._id, function (err,product) {
-        console.log(req.body);
-        console.log(product);
-        // product.type = req.body.type;
-        // product.sub_type = req.body.sub_type;
-        // product.stimulus = req.body.stimulus;
-        // product.stem =  req.body.stem;
-        // product.answer_choices = req.body.answer_choices;
-        // product.right_answer = req.body.right_answer;
-        // product.save(function(err,product){
-        //     res.json({err,product})
-        // });
+        product.type = req.body.type;
+        product.sub_type = req.body.sub_type;
+        product.stimulus = req.body.stimulus;
+        product.stem =  req.body.stem;
+        product.answer_choices = req.body.answer_choices;
+        product.right_answer = req.body.right_answer;
+        product.save(function(err,product){
+            res.json({err,product})
+        });
     })
 }
 
@@ -74,4 +72,15 @@ export function deleteQuestionPack(req, res) {
             res.json({err,product});
     });
   })
+}
+
+export function editQuestionPack(req, res) {
+    QuestionPack.findById(req.body._id, function (err,product) {
+        product.available_time = req.body.available_time;
+        product.question_ids = req.body.questions_ids;
+        product.level = req.body.level;
+        product.save(function(err,product){
+            res.json({err,product})
+        });
+    })
 }

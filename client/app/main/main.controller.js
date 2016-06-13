@@ -146,48 +146,70 @@ angular.module('techkidsApp')
 
     $scope.onEditQuestion = function(){
         var question = {
-                "_id" : "575a5c9662a2ea18b0e626af",
-                "type" : "Q",
-                "sub_type" : "ARTH",
-                "stimulus" : "If an object travels at five feet per second, how many feet does it travel in one hour?",
-                "stem" : "",
-                "answer_choices" : [
-                    {
-                        "index" : 0,
-                        "choice" : ". 30",
-                        "explanation" : "Đáp án sai",
-                        "note" : ""
-                    },
-                    {
-                        "index" : 1,
-                        "choice" : "300",
-                        "explanation" : "Đáp án sai",
-                        "note" : ""
-                    },
-                    {
-                        "index" : 2,
-                        "choice" : "720",
-                        "explanation" : "Đáp án sai",
-                        "note" : ""
-                    },
-                    {
-                        "index" : 3,
-                        "choice" : "1800",
-                        "explanation" : "Đáp án sai",
-                        "note" : ""
-                    },
-                    {
-                        "index" : 4,
-                        "choice" : "18000",
-                        "explanation" : "Đáp án đúng",
-                        "note" : ""
-                    }
-                ],
-                "right_answer" : 4
+            "_id" : "575a5c9762a2ea18b0e626b1",
+            "type" : "webapp nhu lone",
+            "sub_type" : "MISC",
+            "stimulus" : "dit con me",
+            "stem" : "The doubt referred to in line 7 concerns whether",
+            "answer_choices" : [
+                {
+                    "index" : 0,
+                    "choice" : "the stage personalities of the past would appeal on  a personal level to people like the author",
+                    "explanation" : "Đáp án đúng",
+                    "note" : ""
+                },
+                {
+                    "index" : 1,
+                    "choice" : "their contemporaries would have understood famous actors",
+                    "explanation" : "Đáp án sai",
+                    "note" : ""
+                },
+                {
+                    "index" : 2,
+                    "choice" : "the acting of famous stage personalities would appeal to us today",
+                    "explanation" : "Đáp án sai",
+                    "note" : ""
+                },
+                {
+                    "index" : 3,
+                    "choice" : "Garrick was as great as he is portrayed",
+                    "explanation" : "Đáp án sai",
+                    "note" : ""
+                },
+                {
+                    "index" : 4,
+                    "choice" : "historical records can reveal personality",
+                    "explanation" : "Đáp án sai",
+                    "note" : ""
+                }
+            ],
+            "right_answer" : 0
         };
         $http.post("/api/gmat/edit-question",question).then(function(response){
-            console.log("delete pack");
-            console.log(response);
+            console.log("edit question");
+        })
+    };
+    $scope.onEditQuestionPack = function(){
+        var questionPack = {
+            "_id" : "575acb6b79824ad42bcf85be",
+            "available_time" : "3000-12-22",
+            "level" : "8 ti",
+            "question_ids" : [
+                "575a5c8762a2ea18b0e62682",
+                "575a5c8962a2ea18b0e62683",
+                "575a5c8962a2ea18b0e62684",
+                "575a5c8962a2ea18b0e62685",
+                "575a5c8a62a2ea18b0e62686",
+                "575a5c8a62a2ea18b0e62687",
+                "575a5c8a62a2ea18b0e62688",
+                "575a5c8b62a2ea18b0e62689",
+                "575a5c8b62a2ea18b0e6268a",
+                "575a5c8b62a2ea18b0e6268b"
+            ],
+            "__v" : 0
+        };
+        $http.post("/api/gmat/edit-question-pack",questionPack).then(function(response){
+            console.log("edit pack");
         })
     };
 })

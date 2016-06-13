@@ -18,6 +18,6 @@ router.post('/delete-question', controller.deleteQuestion);
 router.post('/delete-question-pack', controller.deleteQuestionPack);
 //edit
 router.post('/edit-question', controller.editQuestion);
-
+router.post('/edit-question-pack', controller.editQuestionPack);
 
 module.exports = router;
