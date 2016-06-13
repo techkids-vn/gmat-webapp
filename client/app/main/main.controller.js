@@ -191,22 +191,21 @@ angular.module('techkidsApp')
     };
     $scope.onEditQuestionPack = function(){
         var questionPack = {
-            "_id" : "575acb6b79824ad42bcf85be",
-            "available_time" : "3000-12-22",
-            "level" : "8 ti",
-            "question_ids" : [
-                "575a5c8762a2ea18b0e62682",
-                "575a5c8962a2ea18b0e62683",
-                "575a5c8962a2ea18b0e62684",
-                "575a5c8962a2ea18b0e62685",
-                "575a5c8a62a2ea18b0e62686",
-                "575a5c8a62a2ea18b0e62687",
-                "575a5c8a62a2ea18b0e62688",
-                "575a5c8b62a2ea18b0e62689",
-                "575a5c8b62a2ea18b0e6268a",
-                "575a5c8b62a2ea18b0e6268b"
-            ],
-            "__v" : 0
+            "_id" : "575a5c8f62a2ea18b0e62697",
+           "available_time" : "2222-22-22",
+           "question_ids" : [
+               "575a5c8c62a2ea18b0e6268d",
+               "575a5c8d62a2ea18b0e6268e",
+               "575a5c8d62a2ea18b0e6268f",
+               "575a5c8d62a2ea18b0e62690",
+               "575a5c8d62a2ea18b0e62691",
+               "575a5c8e62a2ea18b0e62692",
+               "575a5c8e62a2ea18b0e62693",
+               "575a5c8e62a2ea18b0e62694",
+               "575a5c8f62a2ea18b0e62695",
+               "575a5c8f62a2ea18b0e62696"
+           ],
+           "level" : "8 ti"
         };
         $http.post("/api/gmat/edit-question-pack",questionPack).then(function(response){
             console.log("edit pack");

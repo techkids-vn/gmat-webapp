@@ -77,7 +77,7 @@ export function deleteQuestionPack(req, res) {
 export function editQuestionPack(req, res) {
     QuestionPack.findById(req.body._id, function (err,product) {
         product.available_time = req.body.available_time;
-        product.question_ids = req.body.questions_ids;
+        product.question_ids = req.body.question_ids;
         product.level = req.body.level;
         product.save(function(err,product){
             res.json({err,product})
