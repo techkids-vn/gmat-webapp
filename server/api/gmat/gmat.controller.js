@@ -28,14 +28,33 @@ export function postQuestion(req, res) {
 }
 
 export function deleteQuestion(req, res) {
+    Question.findById(req.body._id, function (err, product) {
+        product.remove(function (err, product) {
+            res.json({err,product});
+    });
+  })
+}
 
+export function editQuestion(req, res) {
+    Question.findById(req.body._id, function (err,product) {
+        console.log(req.body);
+        console.log(product);
+        // product.type = req.body.type;
+        // product.sub_type = req.body.sub_type;
+        // product.stimulus = req.body.stimulus;
+        // product.stem =  req.body.stem;
+        // product.answer_choices = req.body.answer_choices;
+        // product.right_answer = req.body.right_answer;
+        // product.save(function(err,product){
+        //     res.json({err,product})
+        // });
+    })
 }
 
 export function postQuestionPack(req, res) {
-  console.log(req.body);
   var post = {
     available_time: req.body.available_time,
-    question_ids: req.body.question_ids,
+    question_ids: req.body.questions_ids,
     level : req.body.level
   };
   QuestionPack.create(post, function(err,data) {
@@ -47,4 +66,12 @@ export function getQuestionPacks(req, res) {
   QuestionPack.find(function (err, data) {
     res.json({err, data});
   });
+}
+
+export function deleteQuestionPack(req, res) {
+    QuestionPack.findById(req.body._id, function (err, product) {
+        product.remove(function (err, product) {
+            res.json({err,product});
+    });
+  })
 }
