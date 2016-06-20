@@ -9,7 +9,7 @@ var controller = require('./gmat.controller.js');
 var router = express.Router();
 //get
 router.get('/questions', controller.getQuestions);
-router.get('/question_pack', controller.getQuestionPacks);
+router.get('/question_packs', controller.getQuestionPacks);
 //post
 router.post('/post-question', controller.postQuestion);
 router.post('/post-question-pack', controller.postQuestionPack);

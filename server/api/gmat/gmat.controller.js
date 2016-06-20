@@ -7,8 +7,8 @@ import Question from './question.model';
 import QuestionPack from './question_pack.model'
 
 export function getQuestions(req, res) {
-  Question.find(function (err, data) {
-    res.json({err, data});
+  Question.find(function (err, questions) {
+    res.json({questions});
   });
 }
 
@@ -61,8 +61,8 @@ export function postQuestionPack(req, res) {
 }
 
 export function getQuestionPacks(req, res) {
-  QuestionPack.find(function (err, data) {
-    res.json({err, data});
+  QuestionPack.find(function (question_pack) {
+    res.json({question_pack});
   });
 }
 

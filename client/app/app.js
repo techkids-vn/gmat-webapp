@@ -18,6 +18,14 @@ angular.module('techkidsApp', [
       })
     ;
 
+    $stateProvider
+      .state('login', {
+        url: '/',
+        templateUrl: 'app/main/main.html',
+        controller: 'MainController'
+      })
+    ;
+
     $locationProvider.html5Mode(true);
   });
 
